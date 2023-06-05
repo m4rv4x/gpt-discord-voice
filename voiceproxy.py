@@ -13,6 +13,7 @@ import scipy.io.wavfile as wav
 from elevenlabs import generate, save
 from elevenlabs import set_api_key
 from pydub import AudioSegment
+import config
 
 ##
 # Danomation
@@ -24,14 +25,14 @@ from pydub import AudioSegment
 
 #set your tts provider:
 # valid options are "google" or "elevenlabs"
-tts_provider = "elevenlabs"
+tts_provider = config.tts_provider
 
 # instructions: Add your openai api key and bot api token
 # set the target channel id for where to ask it questions with "!GPT message here"
-openai.api_key = "your_open_ai_api_key"
-discord_api_token = 'your_discord_bot_token'
-elevenlabs_api_key = "your_elevenlabs_api_key"
-discord_target_channel_id = your_voice_channel_num
+openai.api_key = config.openai.api_key
+discord_api_token = config.discord_api_token
+elevenlabs_api_key = config.elevenlabs_api_key
+discord_target_channel_id = config.discord_target_channel_id
 set_api_key(elevenlabs_api_key)
 
 def sendtts(message):

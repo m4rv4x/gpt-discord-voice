@@ -7,7 +7,7 @@ GPT4 + ElevenLabs | google TTS -> Discord Voice Bot
 debian:  
 
 
-```
+```sh
 ### Clone Rep
 git clone https://github.com/m4rv4x/gpt-discord-voice
 cd gpt-discord-voice
@@ -15,7 +15,6 @@ cd gpt-discord-voice
 ### Install Req
 sudo apt install ffmpeg python3-pyaudio libportaudio2  
 pip install -r requirements.txt
-
 ```
 # Config
 config.py
@@ -42,7 +41,7 @@ name = "gpt"
 
 
 ### Run Bot
-```
+```sh
 python3 bot.py & python3 voiceproxy.py
 ```
 # Todo

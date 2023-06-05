@@ -8,6 +8,7 @@ from discord.utils import get
 #from elevenlabslib.helpers import *
 #from elevenlabslib import *
 from elevenlabs import generate, save
+import config
 
 ##
 # Project GPT-Voice
@@ -22,10 +23,10 @@ from elevenlabs import generate, save
 
 # instructions: Add your openai api key and bot api token
 # set the target channel id for where to ask it questions with "!GPT message here"
-openai.api_key = "OPENAI API Key"
-elevenlabs_api_key = "Elevenlabs API Key"
-discord_api_token = 'Your Discord Bot Token'
-discord_target_channel_id = "Which discord channel id do you wanna use? Add it here without quotes"
+openai.api_key = config.openai.api_key
+elevenlabs_api_key = config.elevenlabs_api_key
+discord_api_token = config.discord_api_token
+discord_target_channel_id = config.discord_target_channel_id
 
 prefix = "!"
 intents = discord.Intents().all()
@@ -40,7 +41,7 @@ def sendgpt(message, author):
         cookedmessage += rawmsg
 
     response = openai.ChatCompletion.create(
-    model = "gpt-3.5-turbo",
+    model = config.openai.model,
     #model="gpt-4",
     messages = [
         {"role": "system", "content": "Vous êtes un robot très impertinent. Vous répondez aux questions en 127 caractères ou moins."},
@@ -80,7 +81,7 @@ async def on_message(message):
 )
 async def gpt(ctx):
     #only handle text from the GPT-Voice channel
-    if ctx.message.channel.id != discord_target_channel_id:
+    if ctx.message.channel.id != config.discord_target_channel_id:
         return
     #auto-detect voice channel
     channel = ctx.message.author.voice.channel

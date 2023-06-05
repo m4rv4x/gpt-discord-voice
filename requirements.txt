@@ -1,0 +1,6 @@
+openai
+discord.py  
+gTTS
+pydub
+PyNaCl
+PySimpleGUI

@@ -1,4 +1,4 @@
-# GPT Discord voice
+# GPT Discord Voice Bot (Legit Bot)
 Simple Discord Voice Bot proof of concept  
 GPT4 + ElevenLabs | google TTS -> Discord Voice Bot  
 

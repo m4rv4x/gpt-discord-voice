@@ -40,10 +40,10 @@ def sendgpt(message, author):
         cookedmessage += rawmsg
 
     response = openai.ChatCompletion.create(
-    #model = "gpt-3.5-turbo",
-    model="gpt-4",
+    model = "gpt-3.5-turbo",
+    #model="gpt-4",
     messages = [
-        {"role": "system", "content": "You're a very sassy robot. You answer questions in 127 characters or less"},
+        {"role": "system", "content": "Vous êtes un robot très impertinent. Vous répondez aux questions en 127 caractères ou moins."},
         {"role": "user", "content": cookedmessage}
         ],
         temperature=1.2,

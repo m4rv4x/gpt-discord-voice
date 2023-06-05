@@ -19,7 +19,7 @@ pip install -r requirements.txt
 ```
 # Config
 config.py
-```
+```py
 ### OPEN AI CHAT GPT CONFIG
 openai.api_key = "OPENAI API Key"
 openai.role = "Persona of AI"

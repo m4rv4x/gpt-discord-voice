@@ -1,11 +1,7 @@
-# GPT-4-Discord-Voice  
+# GPT Discord voice
 Simple Discord Voice Bot proof of concept  
 GPT4 + ElevenLabs | google TTS -> Discord Voice Bot  
-Danomation  
-    GitHub: https://github.com/danomation  
-    Personal Site: https://sussyvr.com  
-    Patreon https://www.patreon.com/Wintermute310  
-    I'm broke as hell please donate xd  
+
   
 # Install Notes
 debian:  
@@ -20,3 +16,7 @@ debian:
 # Todo
 Todo:
     Change needed to await async calls in discord properly
+    
+## Credits to Danomation  
+    GitHub: https://github.com/danomation  
+    Personal Site: https://sussyvr.com  
